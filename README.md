@@ -50,8 +50,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/livinglifemeaning/E-Commerce-Page/tree/master
+- Live Site URL: https://livinglifemeaning.github.io/E-Commerce-Page/
 
 
 ### Built with
@@ -68,6 +68,8 @@ Users should be able to:
 
 ### Notes
 
-Estimated Time : 5hrs | Actual Time: 
+Estimated Time : 5hrs | Actual Time: 10hrs
 
 - Played with using "mini-components" within my components, made it easy to deal with list items (aka the product images), which is something I had a hard time dealing with before. helped out by : https://beta.reactjs.org/learn/managing-state
+
+- way longer than I thought it'd take, but took time to make sure it was broken down in a way I like, so worth it!
