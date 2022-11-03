@@ -1,0 +1,25 @@
+@import "../../../base-styles/variables.scss";
+.gallery {
+  position: relative;
+}
+.imagesBox {
+  cursor: pointer;
+}
+.arrowBox {
+  @include arrow-box;
+}
+
+.thumbnailsBox ul {
+  @include flex-row;
+  justify-content: space-between;
+
+  img {
+    max-width: 5rem;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .gallery {
+    max-width: 25rem;
+  }
+}

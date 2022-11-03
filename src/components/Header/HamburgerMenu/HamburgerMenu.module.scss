@@ -1,0 +1,51 @@
+@import "../../../base-styles/variables.scss"; 
+
+.menuBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+  }
+  
+  .menuBtnBurger {
+    width: 20px;
+    height: 4px;
+    background: $c-500; 
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menuBtnBurger::before,
+  .menuBtnBurger::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background: $c-500;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menuBtnBurger::before{
+      transform: translateY(-8px); 
+  }
+  
+  .menuBtnBurger::after{
+      transform: translateY(8px);
+  }
+  
+  .menuBtn.open .menuBtnBurger{
+  transform: translateX(-50px); 
+  background: transparent; 
+  box-shadow: none; 
+  }
+  
+  .menuBtn.open .menuBtnBurger::before{
+      transform: rotate(45deg) translate(35px, -35px); 
+  }
+  
+  .menuBtn.open .menuBtnBurger::after{
+      transform: rotate(-45deg) translate(35px, 35px); 
+  }

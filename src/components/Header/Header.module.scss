@@ -1,0 +1,45 @@
+@import "../../base-styles/variables.scss";
+
+.header {
+  width: 100%;
+  padding: 1rem 1.375rem;
+  background-color: $c-white;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto 1fr auto;
+  grid-template-areas: "nav logo .  cart";
+}
+.logo {
+  grid-area: logo;
+}
+
+.navBox {
+  grid-area: nav;
+  margin-right: 1rem; 
+}
+.cartBox {
+  grid-area: cart;
+  justify-self: end;
+  @include flex-row(clamp(1rem, 3vw, 3rem)); 
+}
+.avatar {
+  width: clamp(30px, 8vw, 50px);
+  cursor: pointer;
+  &:hover {
+    border: solid 2px $c-orange;
+    border-radius: 50%;
+  }
+}
+
+
+@media (min-width: $desktop-size) {
+    .header{
+        grid-template-areas: "logo nav cart";
+        border-bottom: solid 1px $c-300; 
+        padding-top: 1.5rem; 
+    }
+    .navBox{
+        margin-right: 0; 
+        margin-left: 4rem; 
+    }
+}

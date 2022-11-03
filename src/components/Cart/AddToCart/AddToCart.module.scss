@@ -1,0 +1,41 @@
+@import "../../../base-styles/variables.scss";
+
+.addToCart {
+  @include flex-column;
+  margin: 1rem 0 5rem; 
+}
+
+.selectItems {
+  background-color: $c-100;
+  @include flex-row(2rem);
+  justify-content: space-around;
+  color: $c-800;
+  font-weight: $fw-700;
+  padding: .8rem 1rem;
+  border-radius: $border-radius;
+  font-size: 1.1rem; 
+}
+
+.icon {
+  cursor: pointer;
+  &:active{
+    scale: .9; 
+  }
+}
+
+.addButton{
+    @include button; 
+    @include flex-row; 
+    padding-block: .8rem;  
+    justify-content: center;
+}
+
+.itemNumber{
+    width: 1rem; 
+}
+@media (min-width: 45em) {
+    .addToCart{
+        margin-bottom: 0; 
+        @include flex-row; 
+    }
+}

@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import Header from "./components/Header/Header";
+import ProductPage from "./components/ProductPage/ProductPage";
 
 function App() {
+  const [cartItems, setCartItems] = useState(0);
+  useEffect(() => {
+    const cartItems = +sessionStorage.getItem("cartItems");
+    if (cartItems) {
+      setCartItems(cartItems);
+    }
+  }, []);
+
+  const handleCartItems = (items, type) => {
+    if (type === "delete") {
+      setCartItems(0);
+      sessionStorage.setItem("cartItems", 0);
+    } else {
+      setCartItems(items)
+      sessionStorage.setItem("cartItems", items);
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Header handleCartItems={handleCartItems} cartItems={cartItems} />
+      <ProductPage handleCartItems={handleCartItems} cartItems={cartItems} />
+    </main>
   );
 }
 

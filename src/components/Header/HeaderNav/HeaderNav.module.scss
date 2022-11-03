@@ -1,0 +1,25 @@
+@import "../../../base-styles/variables.scss"; 
+
+.overlay{
+    position: absolute; 
+    z-index: 50; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    min-height: 100vh; 
+    background-color: $c-black-opaque; 
+}
+.openNav{
+    position: absolute; 
+    z-index: 100; 
+    background-color: $c-white; 
+    top: 0; 
+    left: 0; 
+    padding: 1rem 1.375rem; 
+    width: 50vw; 
+    min-height: 100vh; 
+}
+.nav{
+    @include nav; 
+}
+

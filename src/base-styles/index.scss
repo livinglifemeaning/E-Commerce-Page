@@ -1,0 +1,13 @@
+@import "./reset.scss";
+@import "./variables.scss"; 
+
+body{
+font-family: $f-primary;
+display: flex; 
+place-content: center;
+
+}
+main{
+    max-width: 70rem;  
+    min-height: 100vh; 
+}

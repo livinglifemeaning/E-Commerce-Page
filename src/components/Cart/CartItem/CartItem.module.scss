@@ -1,0 +1,32 @@
+@import "../../../base-styles/variables.scss"; 
+
+.cartItems{
+    @include flex-column; 
+    padding: 1rem 1.5rem 1.5rem; 
+}
+.productInfo{
+    @include flex-row; 
+}
+
+.thumbnail{
+    width: 3rem; 
+    border-radius: $border-radius; 
+}
+
+.itemName, .price{
+    color: $c-500; 
+}
+
+.totalPrice{
+    font-weight: $fw-700; 
+    color: $c-800; 
+    margin-left: .5rem; 
+}
+
+.button{
+    @include button; 
+}
+
+.delete{
+    cursor: pointer; 
+}

@@ -1,0 +1,49 @@
+@import "../../base-styles/variables.scss";
+.cart{
+  position: relative; 
+}
+.cartButton {
+  cursor: pointer;
+
+  &:active img {
+    scale: 0.96;
+  }
+}
+
+.cartCard {
+  max-width: 20rem; 
+  position: absolute;
+  z-index: 100; 
+  background-color: $c-white;
+  border-radius: $border-radius; 
+  right: -3rem; 
+  width: 30rem; 
+  top: 5rem;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1); 
+}
+
+@media (max-width: 45em) {
+  .cartCard{
+    right: 0; 
+  }
+}
+.heading{
+    font-weight: $fw-700; 
+    font-size: 1.1rem; 
+    color: $c-800; 
+    margin-block: 1rem; 
+    margin-left: 1rem; 
+}
+
+.empty{
+    font-weight: $fw-700; 
+    color: $c-500; 
+    text-align: center; 
+    margin-block: 5rem; 
+}
+
+.divider{
+    background-color:$c-300 ;
+    height: 1px; 
+    width: 100%; 
+}

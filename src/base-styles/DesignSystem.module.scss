@@ -1,0 +1,28 @@
+@import "./variables.scss";
+.designSystem{
+    padding: 3rem; 
+
+    h1{
+        margin-bottom: 3rem; 
+    }
+
+    > *{
+        margin-bottom: 4rem; 
+    }
+}
+
+.header{
+    @include heading; 
+}
+
+.bodyText{
+    color: $c-500
+}
+
+.nav{
+    @include nav; 
+}
+
+.button{
+    @include button;
+}
